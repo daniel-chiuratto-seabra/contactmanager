@@ -1,0 +1,8 @@
+spring:
+  kafka:
+    listener:
+      missing-topics-fatal: false
+    producer:
+      bootstrap-servers: localhost:9091,localhost:9092,localhost:9093
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: nl.jungle.databaseservice.serializer.CollectionContactSerializer

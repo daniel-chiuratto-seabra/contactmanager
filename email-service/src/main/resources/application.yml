@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  kafka:
+    listener:
+      missing-topics-fatal: false
+    consumer:
+      bootstrap-servers: localhost:9091,localhost:9092,localhost:9093
+      group-id: email-service
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: nl.jungle.emailservice.serializer.JsonNodeDeserializer
+    producer:
+      bootstrap-servers: localhost:9091,localhost:9092,localhost:9093
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: nl.jungle.emailservice.serializer.ContactSerializer
+mail:
+  username: dseabra1984@gmail.com
+  password: wanriecnhmmnittv
