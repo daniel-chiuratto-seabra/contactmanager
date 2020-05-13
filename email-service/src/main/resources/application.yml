@@ -16,4 +16,3 @@ spring:
       value-serializer: nl.jungle.emailservice.serializer.ContactSerializer
 mail:
   username: dseabra1984@gmail.com
-  password: wanriecnhmmnittv
